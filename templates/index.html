@@ -15,12 +15,14 @@
         <tr>
             <th>Task</th>
             <th>Added</th>
+            <th>Time Spent</th>
             <th>Actions</th>
         </tr>
         {% for task in tasks %}
         <tr>
             <td>{{ task.content }}</td>
             <td>{{ task.date_created.date() }}</td>
+            <td>{{ task.time_spent }}</td>
             <td>
                 <a href="/delete/{{task.id}}">delete</a>
             <br>
@@ -30,9 +32,13 @@
         {% endfor %}
     </table>
     {% endif %}
+    <br><BR>
 
     <form actions="/" method="POST">
-        <input type="text" name="content" id="content">
+        name <input type="text" name="content" id="content">
+        <br><br>
+        time spent <input type="text" name="time_spent" id="time_spent">
+        
         <input type="submit" value="Add Task">
     </form>
 </div>
