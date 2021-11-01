@@ -54,7 +54,7 @@ def delete(id):
 def update(id):
     task = Todo.query.get_or_404(id)
     if request.method =='POST':
-        task.content=request.form['content']
+        task.time_spent=request.form['time_spent']
 
         try:
             db.session.commit()

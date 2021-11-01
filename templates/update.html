@@ -6,12 +6,12 @@
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: center">Update Task</h1>
+    <h1 style="text-align: center">Add More Time </h1>
 
     <div class="form">
         <form actions="/update/{{task.id}}" method="POST">
-            <input type="text" name="content" id="content" value="{{task.content}}">
-            <input type="submit" value="Update Task">
+            <input type="text" name="time_spent" id="time_spent" value="{{task.time_spent}}">
+            <input type="submit" value="Update Time">
         </form>
     </div>
 </div>
